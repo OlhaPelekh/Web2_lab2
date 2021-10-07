@@ -6,7 +6,7 @@ block prepend styles
 block content
   div(class='breadcrumb')
     li= title
-  form(id='ticketSold-add-form' name='ticketSold-add-form' class='form-inline' action='')
+  form(id='soldticket-add-form' name='soldticket-add-form' class='form-inline' action='')
     input(id='id' name='id' value='' class='form-control' type='hidden')
     p(class='text-danger' id='error-text')
     div(class='form-group')
@@ -31,16 +31,15 @@ block content
         button(id="form-button" type='submit' class='btn btn-primary') Create
     div.list-wrapper
       table(id='ticket-list')
-    h1 Profitable routes
-    div.list-wrapper    
-      table(id='toproutes')
-    h1 Routes without sold tickets
+    h1 Routes without tickets
     div.list-wrapper
       table(id='routes_without')
-   
+    h1 Most paid routes
+    div.list-wrapper    
+      table(id='toproutes')
 
 block append scripts
-  script(src='/static/js/models/ticketSold.js')
+  script(src='/static/js/models/soldticket.js')
   script(src='//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js')
-  script(src='/static/js/views/ticketSold.js')
+  script(src='/static/js/views/soldticket.js')
       

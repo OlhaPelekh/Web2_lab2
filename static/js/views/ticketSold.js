@@ -1,9 +1,9 @@
 'use strict'
 
-const ticketModel = new SoldTicket() // eslint-disable-line no-undef
+const ticketModel = new TicketSold() // eslint-disable-line no-undef
 
 function initAddForm () {
-  const form = window.document.querySelector('#soldticket-add-form')
+  const form = window.document.querySelector('#ticketsold-add-form')
   form.addEventListener('submit', function (e) {
     e.preventDefault()
     const formData = new FormData(e.target)
@@ -84,7 +84,7 @@ function routeWithoutTicket(){
   if (localStorage.getItem("trains")) {
     JSON.parse(localStorage.getItem("trains")).forEach(function (train) {
         all_routes.push(train['id'])
-      JSON.parse(localStorage.getItem("sold_ticket")).forEach(function (route) {
+      JSON.parse(localStorage.getItem("ticket_sold")).forEach(function (route) {
         
         if (route['train'] == train['route']){
           reserved_routes.push(train['id'])
@@ -113,7 +113,7 @@ function routeWithoutTicket(){
 function topPaidRoutes(amount){
   let routes = [];
   let routeObject ={};
-  JSON.parse(localStorage.getItem("sold_ticket")).forEach(function (route) {
+  JSON.parse(localStorage.getItem("ticket_sold")).forEach(function (route) {
 
     if (routeObject[route['train']]){
       routeObject[route['train']] = Number(routeObject[route['train']]) + Number(route['ticket'])
@@ -142,7 +142,7 @@ return top_routes.slice(0,3);
 }
 
 function initListEvents () {
-  document.addEventListener('sold_ticketListDataChanged', function (e) {
+  document.addEventListener('ticket_soldListDataChanged', function (e) {
     const dataTable = window.jQuery('#ticket-list').DataTable()
 
     dataTable.clear()

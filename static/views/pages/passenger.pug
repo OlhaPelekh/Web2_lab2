@@ -7,8 +7,8 @@ block content
   div(class='breadcrumb')
     li= title
   form(id='passenger-add-form' name='passenger-add-form' class='form-inline' action='')
-      //- input(id='id' name='id' value='' class='form-control' type='hidden')
-      //- p(class='text-danger' id='error-text')
+    input(id='id' name='id' value='' class='form-control' type='hidden')
+    p(class='text-danger' id='error-text')
     div(class='form-group')
       div(class='col-md-3')
         label(for='name') Name
@@ -16,15 +16,16 @@ block content
         input(id='name' name='name' value='' class='form-control')
     div(class='form-group')
       div(class='col-md-3')
-        label(for='name') Surname 
+        label(for='name') Surname
       div(class='col-md-9')
         input(id='surname' name='surname' value='' class='form-control')        
     div(class='form-group')
       div(class='col-md-12')
-        button(type='submit' class='btn btn-primary') Create
+        button(id="form-button" type='submit' class='btn btn-primary') Create
     div.list-wrapper
       table(id='passenger-list')
 block append scripts
-  script(src='/static/js/models/shop.js')
+  script(src='/static/js/models/passenger.js')
   script(src='//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js')
-  script(src='/static/js/views/shop.js')
+  script(src='/static/js/views/passenger.js')
+      

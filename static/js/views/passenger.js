@@ -1,3 +1,5 @@
+'use strict'
+
 const passengerModel = new Passenger() // eslint-disable-line no-undef
 
 function initAddForm () {
