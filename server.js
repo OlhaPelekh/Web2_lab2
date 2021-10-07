@@ -30,8 +30,8 @@ app.get('/passenger/:id', function (request, response) {
   app.get('/ticket', function (request, response) {
     response.render('pages/ticket', { title: 'Ticket' })
   })
-  app.get('/soldticket', function (request, response) {
-    response.render('pages/soldticket', { title: 'Sold Ticket' })
+  app.get('/ticketSold', function (request, response) {
+    response.render('pages/ticketSold', { title: 'Ticket Sold' })
   })
   
 
