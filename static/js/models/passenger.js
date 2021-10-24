@@ -1,4 +1,4 @@
-class Passenger extends BaseModel { // eslint-disable-line no-unused-vars, no-undef
+class Passenger extends BaseModel { 
   constructor () {
     super('passengers')
 

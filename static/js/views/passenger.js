@@ -1,6 +1,6 @@
 'use strict'
 
-const passengerModel = new Passenger() // eslint-disable-line no-undef
+const passengerModel = new Passenger() 
 
 function initAddForm () {
   const form = window.document.querySelector('#passenger-add-form')

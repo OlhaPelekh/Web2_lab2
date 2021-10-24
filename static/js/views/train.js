@@ -1,6 +1,6 @@
 'use strict'
 
-const trainModel = new Train() // eslint-disable-line no-undef
+const trainModel = new Train() 
 
 function initAddForm () {
   const form = window.document.querySelector('#train-add-form')

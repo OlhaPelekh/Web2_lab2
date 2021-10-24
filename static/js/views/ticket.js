@@ -1,6 +1,6 @@
 'use strict'
 
-const ticketModel = new Ticket() // eslint-disable-line no-undef
+const ticketModel = new Ticket() 
 
 function initAddForm () {
   const form = window.document.querySelector('#ticket-add-form')

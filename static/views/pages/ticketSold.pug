@@ -21,14 +21,14 @@ block content
       div(class='col-md-3')
         label(for='ticket') Ticket
       div(class='col-md-9')
-        input(id='ticket' name='ticket' value='' class='form-control'  autocomplete="off")
+        input(id='ticket' name='ticket' value='' class='form-control'  autocomplete="off" )
       div(class='col-md-3')
         label(for='ticket') Date
       div(class='col-md-9')
         input(id='date' name='date' value='' class='form-control'  autocomplete="off" type="date")
     div(class='form-group')
       div(class='col-md-12')
-        button(id="form-button" type='submit' class='btn btn-primary') Create
+        button(id="form-button" type='submit' class='btn btn-primary' style='background: green') Create
     div.list-wrapper
       table(id='ticket-list')
     h1 Routes without sold tickets
@@ -37,9 +37,6 @@ block content
     h1 Profitable routes
     div.list-wrapper
       table(id='toproutes')
-      h1 Popular routes
-    div.list-wrapper
-      table(id='popularroutes')  
 
 block append scripts
   script(src='/static/js/models/ticketSold.js')

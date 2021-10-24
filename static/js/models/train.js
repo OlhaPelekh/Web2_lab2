@@ -1,4 +1,4 @@
-class Train extends BaseModel { // eslint-disable-line no-unused-vars, no-undef
+class Train extends BaseModel { 
     constructor () {
       super('trains')
   
